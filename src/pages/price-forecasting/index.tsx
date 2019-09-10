@@ -12,6 +12,7 @@ export default class index extends Component {
       <View  className='index' >
         <View className='banner'>
           <Text className='banner-text'>榜单预测未来三个月有可能产生的数据波动</Text>
+          <Image className='banner-image' src={require('./assets/predict_delete.png')} />
         </View>
         {
           [...Array(10).keys()].map((item,i)=>{
@@ -22,7 +23,7 @@ export default class index extends Component {
                 <View className='item-left'>
 
                   <View className='item-ranking' >
-                    <Text className='item-ranking-text'>{i}</Text>
+                    <Text className='item-ranking-text'>{i+1}</Text>
                   </View>
 
                   <Image mode='aspectFit' className='item-carImage' src={'http://t1.qichangv.com/images/201909/0909/93b7a367-d045-495f-bd65-26a8543aacff.png'} />
@@ -35,7 +36,11 @@ export default class index extends Component {
                 </View>
 
                 <View className='item-titleContainer'>
-                  <Text className='item-percent'>35%</Text>
+                  <View className='item-titleContainer-row'>
+                    <Image className='item-titleContainer-row-image' src={require('./assets/price_arrows.png')}  />
+                    <Text className='item-percent'>35%</Text>
+                  </View>
+
                   <Text className='item-forecastTitle'>预计下浮</Text>
                 </View>
 
